@@ -23,5 +23,4 @@ void StartThread(){
 void WaitThread(){
 	WaitForSingleObject( hThread, INFINITE );
 	CloseHandle( hThread );
-	getchar();
 }
