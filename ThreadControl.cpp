@@ -6,9 +6,12 @@
 HANDLE hThread;
 unsigned threadID;
 
+void ThreadFunction();
+
 // ƒXƒŒƒbƒhŠÖ”
 unsigned __stdcall SecondThreadFunc( void* pArguments )
 {
+	ThreadFunction();
     _endthreadex( 0 );
     return 0;
 } 

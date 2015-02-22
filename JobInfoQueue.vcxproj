@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="JobInfoQueue.cpp" />
+    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="ThreadControl.cpp" />
   </ItemGroup>
