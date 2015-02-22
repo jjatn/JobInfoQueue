@@ -11,10 +11,11 @@
 
 int FuncIndex = 0;
 
-extern TestSet test_01_DataAddPop;
+extern TestSet test_01_DataAddPop, test_02_OnceEmpty;
 
 static TestSet *ptestFunc[] = {
-	&test_01_DataAddPop
+	&test_01_DataAddPop,
+	&test_02_OnceEmpty
 };
 
 void ThreadFunction(){

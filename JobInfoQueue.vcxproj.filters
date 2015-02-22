@@ -50,5 +50,8 @@
     <ClCompile Include="TestCompornent\TestSet.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="TestCompornent\OnceEmpty.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

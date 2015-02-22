@@ -36,3 +36,6 @@ private:
 
 #define ASSERT_INT(INT1, INT2) TESTSET.AssertInt(INT1, INT2, __LINE__);
 #define ASSERT_STR(STR1, STR2) TESTSET.AssertStr(STR1, STR2, __LINE__);
+
+#define JOIN_TEST(TESTSET, MAIN, SUB)	TestSet	TESTSET(#TESTSET, MAIN, SUB)
+

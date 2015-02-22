@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "FeatureFunc.h"
+
 #define MAX_JOB 10
 
 typedef struct info {
@@ -12,6 +14,8 @@ static INFO iInfo[MAX_JOB] = { 0 };
 
 static int nHead = 0;
 static int nTail = 0;
+
+static INFO *pCurrentInfo = NULL;
 
 void JobInfoQueue_Reset()
 {
@@ -32,17 +36,22 @@ int JobInfoQueue_Create(int ntype, char* cPath){
 	return ret;
 }
 
-int JobInfoQueue_Start(int *pnType, char* cPath){
+INFO *JobInfoQueue_Start(int *pnType, char* cPath){
 	int ret;
 	*pnType = iInfo[nTail].nType;
 	strncpy_s(cPath, 30, iInfo[nTail].cPath, 30);
 	ret = nTail;
 	nTail++;
-	return ret;
+	pCurrentInfo = &iInfo[ret];
+	return &iInfo[ret];
 }
 
-int JobInfoQueue_Drop(int nJobID){
-	return 0;
+void JobInfoQueue_End(INFO *pInfo){
+	if (pCurrentInfo != pInfo){
+		return;
+	}
+	pCurrentInfo = NULL;
+	return;
 }
 
 
