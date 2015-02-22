@@ -87,6 +87,7 @@
   <ItemGroup>
     <ClCompile Include="JobInfoQueue.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="ThreadControl.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
